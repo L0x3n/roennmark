@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: roennmark
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

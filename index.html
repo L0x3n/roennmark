@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROENNMARK — Film & Redigering</title>
+    <meta name="description" content="Roennmark — Cinematic storytelling och professionell filmredigering. Showcase av kreativa projekt.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="logo-letter">R</span>
+                <span class="logo-letter">O</span>
+                <span class="logo-letter">E</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">M</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">R</span>
+                <span class="logo-letter">K</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress" id="preloaderProgress"></div>
+            </div>
+            <div class="preloader-percent" id="preloaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Film frame -->
+                    <rect x="6" y="12" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                    <!-- Sprocket holes -->
+                    <rect x="9.5" y="15.5" width="4" height="4" fill="currentColor"/>
+                    <rect x="30.5" y="15.5" width="4" height="4" fill="currentColor"/>
+                    <rect x="9.5" y="28.5" width="4" height="4" fill="currentColor"/>
+                    <rect x="30.5" y="28.5" width="4" height="4" fill="currentColor"/>
+                    <!-- Play triangle -->
+                    <path d="M19.5 20L27 24.5L19.5 29V20Z" fill="currentColor"/>
+                </svg>
+                <span class="logo-text">ROENNMARK</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#work" class="nav-link" data-text="Work">Work</a>
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="title-word">Cinematic</span>
+                </span>
+                <span class="title-line">
+                    <span class="title-word accent">Storytelling</span>
+                </span>
+            </h1>
+            
+            <p class="hero-description">
+                Jag skapar visuella berättelser som fångar ögonblick och väcker känslor. 
+                Specialiserad på filmredigering, color grading och motion design.
+            </p>
+            
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-primary">
+                    <span class="btn-text">Se mitt arbete</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-text">Kontakt</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number" data-count="50">0</span>
+                <span class="stat-label">Projekt</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="5">0</span>
+                <span class="stat-label">År Erfarenhet</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="100">0</span>
+                <span class="stat-label">Nöjda Kunder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="section-header">
+            <div class="section-label">
+                <span class="label-number">01</span>
+                <span class="label-text">Portfolio</span>
+            </div>
+            <h2 class="section-title">Utvalda Projekt</h2>
+        </div>
+
+        <div class="work-grid">
+            <!-- Project 1 -->
+            <article class="work-card" data-category="film">
+                <div class="work-media">
+                    <div class="work-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                        <div class="placeholder-content">
+                            <div class="placeholder-icon">🎬</div>
+                            <span class="placeholder-text">Commercial</span>
+                        </div>
+                    </div>
+                    <div class="work-overlay">
+                        <div class="work-info">
+                            <span class="work-category">Reklamfilm</span>
+                            <h3 class="work-title">Nordic Visions</h3>
+                            <p class="work-description">En visuell resa genom skandinaviska landskap för ett internationellt varumärke.</p>
+                        </div>
+                        <div class="work-meta">
+                            <span class="work-year">2025</span>
+                            <span class="work-duration">2:34</span>
+                        </div>
+                    </div>
+                    <button class="work-play" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="work-card" data-category="music">
+                <div class="work-media">
+                    <div class="work-placeholder" style="background: linear-gradient(135deg, #2d1b2e 0%, #1a1a2e 50%, #16213e 100%);">
+                        <div class="placeholder-content">
+                            <div class="placeholder-icon">🎵</div>
+                            <span class="placeholder-text">Music Video</span>
+                        </div>
+                    </div>
+                    <div class="work-overlay">
+                        <div class="work-info">
+                            <span class="work-category">Musikvideo</span>
+                            <h3 class="work-title">Echoes of Silence</h3>
+                            <p class="work-description">Atmosfärisk musikvideo med experimentell editing och färgbehandling.</p>
+                        </div>
+                        <div class="work-meta">
+                            <span class="work-year">2025</span>
+                            <span class="work-duration">3:45</span>
+                        </div>
+                    </div>
+                    <button class="work-play" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="work-card" data-category="short">
+                <div class="work-media">
+                    <div class="work-placeholder" style="background: linear-gradient(135deg, #3a2a1a 0%, #2d1b2e 50%, #1a1a2e 100%);">
+                        <div class="placeholder-content">
+                            <div class="placeholder-icon">🎞️</div>
+                            <span class="placeholder-text">Short Film</span>
+                        </div>
+                    </div>
+                    <div class="work-overlay">
+                        <div class="work-info">
+                            <span class="work-category">Kortfilm</span>
+                            <h3 class="work-title">The Last Frame</h3>
+                            <p class="work-description">Prisbelönt kortfilm om minnen och förgänglighet.</p>
+                        </div>
+                        <div class="work-meta">
+                            <span class="work-year">2024</span>
+                            <span class="work-duration">8:15</span>
+                        </div>
+                    </div>
+                    <button class="work-play" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <div class="work-filter">
+            <button class="filter-btn active" data-filter="all">Alla</button>
+            <button class="filter-btn" data-filter="film">Reklam</button>
+            <button class="filter-btn" data-filter="music">Musik</button>
+            <button class="filter-btn" data-filter="short">Kortfilm</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-visual">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="placeholder-frame"></div>
+                        <div class="placeholder-content">
+                            <span class="placeholder-icon">👤</span>
+                            <span class="placeholder-text">Portrait</span>
+                        </div>
+                    </div>
+                    <div class="about-experience">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">År av erfarenhet</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="section-label">
+                    <span class="label-number">02</span>
+                    <span class="label-text">Om Mig</span>
+                </div>
+                
+                <h2 class="section-title">Passion för visuellt berättande</h2>
+                
+                <div class="about-text">
+                    <p>
+                        Jag är en filmredigerare och visuell berättare baserad i Sverige. 
+                        Med över fem års erfarenhet inom filmproduktion har jag utvecklat 
+                        en unik förmåga att fånga känslor och skapa engagerande narrativ.
+                    </p>
+                    <p>
+                        Min approach kombinerar teknisk precision med kreativ intuition. 
+                        Varje projekt är en möjlighet att utforska nya visuella språk och 
+                        berättartekniker.
+                    </p>
+                </div>
+
+                <div class="about-skills">
+                    <div class="skill">
+                        <span class="skill-name">DaVinci Resolve</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Vegas Pro</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="section-header">
+            <div class="section-label">
+                <span class="label-number">03</span>
+                <span class="label-text">Process</span>
+            </div>
+            <h2 class="section-title">Så här arbetar jag</h2>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3 class="step-title">Discovery</h3>
+                    <p class="step-description">
+                        Vi börjar med att förstå din vision, målgrupp och budskap. 
+                        Genom samtal och referenser skapar vi en gemensam riktning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3 class="step-title">Pre-produktion</h3>
+                    <p class="step-description">
+                        Planering av struktur, pacing och visuellt uttryck. 
+                        Moodboards, storyboards och teknisk förberedelse.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3 class="step-title">Redigering</h3>
+                    <p class="step-description">
+                        Här sker magin. Jag bygger berättelsen klipp för klipp, 
+                        med fokus på rytm, känsla och narrativ kraft.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3 class="step-title">Leverans</h3>
+                    <p class="step-description">
+                        Färdig film i alla önskade format. 
+                        Revisioner ingår för att säkerställa att resultatet överträffar förväntningarna.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="contact-content">
+                <div class="section-label">
+                    <span class="label-number">04</span>
+                    <span class="label-text">Kontakt</span>
+                </div>
+                
+                <h2 class="section-title">Låt oss skapa något fantastiskt</h2>
+                
+                <p class="contact-text">
+                    Har du ett projekt i åtanke? Tveka inte att höra av dig. 
+                    Jag är alltid öppen för nya utmaningar och kreativa samarbeten.
+                </p>
+
+                <div class="contact-info">
+                    <a href="mailto:ronnmark92@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-value">ronnmark92@gmail.com</span>
+                    </a>
+                    <div class="contact-link">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-value">Örebro, Sverige</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/roennmark/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Namn</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-post</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Ämne</label>
+                        <select id="subject" name="subject" class="form-select">
+                            <option value="">Välj ämne</option>
+                            <option value="commercial">Reklamfilm</option>
+                            <option value="music">Musikvideo</option>
+                            <option value="documentary">Dokumentär</option>
+                            <option value="short">Kortfilm</option>
+                            <option value="other">Annat</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Meddelande</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-text">Skicka meddelande</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">ROENNMARK</span>
+                <p class="footer-tagline">Cinematic storytelling & film editing</p>
+            </div>
+            <div class="footer-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright">© 2025 Roennmark. Alla rättigheter förbehållna.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+            <div class="modal-video">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <span class="video-icon">🎬</span>
+                        <p>Video Player Placeholder</p>
+                        <p class="video-note">Här skulle din video spelas upp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
