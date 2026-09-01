@@ -413,6 +413,70 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;
+    overflow: hidden;
+}
+
+.hero-video-wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.4) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 15, 0.3) 0%,
+        rgba(10, 10, 15, 0.5) 50%,
+        rgba(10, 10, 15, 0.7) 100%
+    );
+}
+
+/* Hero Film Frame Border */
+.hero-video-frame {
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero-video-frame::before,
+.hero-video-frame::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-accent);
+    opacity: 0.5;
+}
+
+.hero-video-frame::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero-video-frame::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
 }
 
 .hero-gradient {
@@ -1418,6 +1482,18 @@ body {
     .hero {
         padding: var(--space-2xl) var(--space-lg);
         min-height: 90vh;
+    }
+    
+    .hero-video {
+        display: none;
+    }
+    
+    .hero-video-frame {
+        display: none;
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(135deg, #0d1a2e 0%, #1a2e4a 50%, #0a1e3a 100%);
     }
     
     .section-header {
