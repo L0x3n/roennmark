@@ -424,14 +424,53 @@ body {
     justify-content: center;
 }
 
-.hero-video {
+.hero-video-css {
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    filter: brightness(0.4) contrast(1.1);
+    inset: 0;
+    overflow: hidden;
+}
+
+.sky {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #1a2a4a 0%, #2a4a6e 50%, #4a6a8a 100%);
+    animation: skyShift 20s ease-in-out infinite;
+}
+
+@keyframes skyShift {
+    0%, 100% { filter: brightness(0.8) hue-rotate(0deg); }
+    50% { filter: brightness(1) hue-rotate(10deg); }
+}
+
+.ocean {
+    position: absolute;
+    top: 60%;
+    left: -10%;
+    width: 120%;
+    height: 40%;
+    background: linear-gradient(to bottom, #1a3a5e 0%, #0a2a4e 50%, #051a3e 100%);
+    animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-10px) translateX(-10px); }
+}
+
+.mountains {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent 0%, #0a1a2e 80%);
+    clip-path: polygon(0% 100%, 15% 40%, 30% 70%, 50% 30%, 70% 60%, 85% 20%, 100% 50%, 100% 100%);
+    animation: mountainGlow 15s ease-in-out infinite;
+}
+
+@keyframes mountainGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.8; }
 }
 
 .hero-overlay {
@@ -1484,7 +1523,7 @@ body {
         min-height: 90vh;
     }
     
-    .hero-video {
+    .hero-video-css {
         display: none;
     }
     
